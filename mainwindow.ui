@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>748</width>
+    <width>609</width>
     <height>434</height>
    </rect>
   </property>
@@ -14,87 +14,38 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>10</y>
-      <width>151</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>40</y>
-      <width>71</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Выбран файл:</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_file">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>60</y>
-      <width>151</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
+      <y>120</y>
       <width>141</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Выбор команды и отправка</string>
+     <string>Choose your target</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_fileupload">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>80</y>
       <width>111</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Обзор...</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_connect">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>130</y>
-      <width>161</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Подключиться и отправить</string>
+     <string>Browse...</string>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox_urls">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>130</y>
-      <width>141</width>
+      <y>150</y>
+      <width>301</width>
       <height>22</height>
      </rect>
     </property>
@@ -103,13 +54,176 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>50</y>
       <width>151</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Загрузка файла с командами</string>
+     <string>Upload targets file</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_fromfile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Targets from file</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_manual">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>10</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Manual enter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_attack">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ATTACK!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stop">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>340</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>STOP!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Manual enter</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>10</y>
+      <width>20</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>IP:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_ip"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Port:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBox_port">
+       <property name="maximum">
+        <number>360000</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tcp messages view:</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>40</y>
+      <width>256</width>
+      <height>341</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>301</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>301</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>
@@ -118,7 +232,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>748</width>
+     <width>609</width>
      <height>20</height>
     </rect>
    </property>
