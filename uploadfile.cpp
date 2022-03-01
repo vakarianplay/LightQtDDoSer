@@ -2,7 +2,7 @@
 
 UploadFile::UploadFile(QObject *parent) : QObject(parent)
 {
-    qDebug() << "vitki class";
+    qDebug() << "uploadfile class";
 }
 
 UploadFile::~UploadFile()

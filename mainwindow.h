@@ -32,16 +32,13 @@ private slots:
     void sendData();
     void onDisconnect();
     void initWindow();
+    void clearText();
     QString GetRandomString();
 
     void on_pushButton_attack_clicked();
-
     void on_pushButton_stop_clicked();
-
     void on_radioButton_fromfile_clicked();
-
     void on_radioButton_manual_clicked();
-
     void on_lineEdit_ip_textEdited();
 
 private:
@@ -49,7 +46,9 @@ private:
     QTcpSocket socket;
     UploadFile *upload = nullptr;
     QTimer *delay;
+    QTimer *delay_clear;
     QString url;
+
     int port;
     int mode;
 
