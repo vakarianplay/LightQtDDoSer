@@ -43,7 +43,6 @@ void MainWindow::on_pushButton_fileupload_clicked()
 void MainWindow::onConnect()
 {
     int comboindex = 0;
-
     switch (mode) {
     case 1:
         comboindex = ui->comboBox_urls->currentIndex();
@@ -88,7 +87,6 @@ void MainWindow::onDisconnect()
 
 void MainWindow::onReading()
 {
-    qDebug() << "read";
     start_timer();
 }
 
