@@ -7,7 +7,7 @@ UploadFile::UploadFile(QObject *parent) : QObject(parent)
 
 UploadFile::~UploadFile()
 {
-    qDebug() << "delete class";
+    qDebug() << "destroy class";
 }
 
 void UploadFile::filedialog()
